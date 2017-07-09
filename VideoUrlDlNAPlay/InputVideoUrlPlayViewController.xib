@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="InputVideoUrlPlayViewController">
+            <connections>
+                <outlet property="videoUrlFd" destination="9xB-mu-c3j" id="wb0-gj-uhk"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xB-mu-c3j">
+                    <rect key="frame" x="74" y="175" width="332" height="77"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="77" id="Ckx-UL-gaM"/>
+                    </constraints>
+                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="输入视频连接" drawsBackground="YES" id="8xg-zd-C8E">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zJE-7q-KhD">
+                    <rect key="frame" x="193" y="131" width="94" height="32"/>
+                    <buttonCell key="cell" type="push" title="投射盒子" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Edp-ut-1SR">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="playVideoAction:" target="-2" id="3XV-74-Khl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="zJE-7q-KhD" firstAttribute="centerX" secondItem="9xB-mu-c3j" secondAttribute="centerX" id="9ya-Xk-nSL"/>
+                <constraint firstItem="9xB-mu-c3j" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Bli-c4-9Pf"/>
+                <constraint firstItem="zJE-7q-KhD" firstAttribute="top" secondItem="9xB-mu-c3j" secondAttribute="bottom" constant="16" id="FBx-4t-2Vr"/>
+                <constraint firstItem="9xB-mu-c3j" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="PoF-R4-h39"/>
+                <constraint firstAttribute="trailing" secondItem="9xB-mu-c3j" secondAttribute="trailing" constant="74" id="f1X-OP-gO4"/>
+                <constraint firstItem="9xB-mu-c3j" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="74" id="gHT-Vl-WVK"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>
